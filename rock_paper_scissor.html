@@ -10,45 +10,66 @@
 
     <button onclick="
         rps();
-        if (computerMove === 'Rock') {
-            alert('computer: Rock , you: Rock; Draw!');
-        }
-        else if (computerMove === 'Paper') {
-            alert('computer: Paper , you: Rock; you loose!');
-
-        }
-        else if (computerMove === 'Scissor') {
-            alert('computer: Scissor , you: Rock; you won!');
-        }">Rock
+        playgame('Rock')
+        ">Rock
     </button>
     <button onclick="
-        rps();
-        if (computerMove === 'Rock') {
-            alert('computer: Rock , you: Paper; you won!');
-        }
-        else if (computerMove === 'Paper') {
-            alert('computer: Paper , you: Paper; Draw!');
-
-        }
-        else if (computerMove === 'Scissor') {
-            alert('computer: Scissor , you: Paper; you loose!');
-        }">Paper
+    rps();
+    playgame('Paper')
+        ">Paper
     </button>   
     <button onclick="
-        rps();
-        if (computerMove === 'Rock') {
-            alert('computer: Rock , you: Scissor; you loose!');
-        }
-        else if (computerMove === 'Paper') {
-            alert('computer: Paper , you: Scissor; you won!');
-
-        }
-        else if (computerMove === 'Scissor') {
-            alert('computer: Scissor , you: Scissor; Draw!');
-        }">Scissor
+    playgame('Scissor')
+        ">Scissor
     </button>  
     
     <script>
+        function playgame(playermove) {
+            rps();
+            if (playermove === 'Scissor') {
+                
+                if (computerMove === 'Rock') {
+                    alert(`computer: Rock , you: ${playermove}; you loose!`);
+                    }
+                else if (computerMove === 'Paper') {
+                    alert(`computer: Paper , you: ${playermove}; you won!`);
+
+                    }
+                else if (computerMove === 'Scissor') {
+                    alert(`computer: Scissor , you: ${playermove}; Draw!`);
+                    }
+                }
+            else if (playermove === 'Rock') {
+                if (computerMove === 'Rock') {
+                    alert('computer: Rock , you: Rock; Draw!');
+                    }
+                else if (computerMove === 'Paper') {
+                    alert('computer: Paper , you: Rock; you loose!');
+
+                    }
+                else if (computerMove === 'Scissor') {
+                    alert('computer: Scissor , you: Rock; you won!');
+                    }
+            }
+            else if (playermove === 'Paper') {
+                    if (computerMove === 'Rock') {
+                        alert(`computer: Rock , you: ${playermove}; you won!`);
+                        }
+                    else if (computerMove === 'Paper') {
+                        alert(`computer: Paper , you: ${playermove};Draw!`);
+
+                        }
+                    else if (computerMove === 'Scissor') {
+                        alert(`computer: Scissor , you: ${playermove}; you loose!`);
+                        }
+
+            }
+
+            }
+            
+
+
+
         let computerMove = '';
         function rps() {
             let random = Math.random();
