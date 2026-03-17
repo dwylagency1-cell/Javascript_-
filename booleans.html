@@ -48,16 +48,40 @@
         console.log(computerMove)
         
         if (computerMove === 'Rock') {
-            alert('computer choosed Rock and you choosed Rock, Draw !');
+            alert('computer choosed Rock and you choosed Paper, you won !');
         }
         else if (computerMove === 'Paper') {
-            alert('computer choosed Paper and you choosed Rock, you loose !');
+            alert('computer choosed Paper and you choosed Paper, Draw !');
         }
         else if (computerMove === 'Scissors') {
-            alert('computer choosed Scissors and you choosed Rock, you won !');
+            alert('computer choosed Scissors and you choosed Paper, you loose !');
 
         }">Paper</button>
-    <button>Scissors</button>
+    <button onclick="
+        let random = Math.random();
+        let computerMove = '';
+        if (random >= 0 && random < 1/3) {
+            computerMove = 'Rock'
+        }
+        else if (random >= 1/3 && random < 2/3) {
+            computerMove = 'Paper'
+        }
+        else if (random >= 2/3 && random < 1) {
+            computerMove = 'Scissors'
+        }
+        
+        console.log(computerMove)
+        
+        if (computerMove === 'Rock') {
+            alert('computer choosed Rock and you choosed Scissors, you loose !');
+        }
+        else if (computerMove === 'Paper') {
+            alert('computer choosed Paper and you choosed Scissors, you won !');
+        }
+        else if (computerMove === 'Scissors') {
+            alert('computer choosed Scissors and you choosed Scissors, Draw !');
+
+        }">Scissors</button>
 
     <script>
         console.log(3 > 5);
@@ -73,11 +97,61 @@
         if ( age >= 18) {
             console.log("you are aligible to drive")
         } 
-        
+
+        const cartquantity = 5;
+        if (cartquantity) {
+            console.log('the cart has products');
+        }
+
+        console.log(!0);
+        console.log('text' / 2)
+        let variable;
+        console.log(variable)
+
+        /*exercise*/
+
+        let hour = '12';
+
+        if (hour >=6 && hour <= 12) {
+            console.log('Good morning');
+        }
+        else if (hour >= 13 && hour <= 17) {
+            console.log('Good afternoon');
+        }
+        else {
+            console.log('Good night')
+        }
 
 
+        let name = 'Dekiru';
+        if (hour >=6 && hour <=12) {
+            console.log(`Good morning ${name}`)
+        }
+        else if (hour >= 13 && hour <= 17) {
+            console.log(`Good afternoon ${name}`);
+        }
+        else {
+            console.log(`Good night ${name}`);
+        }
+
+
+
+        let age_group = 3;
+        let holiday = true;
+        if (age_group === 6 && holiday === !true || age_group <=6 && holiday === !true) {
+            console.log('Discount');
+        }
         
-        
+        else if (age_group === 65 && holiday === !true || age_group > 65 && holiday === !true) {
+            console.log('Discount');
+        }
+        else{
+            console.log('No discount')
+        }
+
+  
+
+
     </script>
     
 </body>
