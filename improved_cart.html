@@ -9,29 +9,23 @@
     <button onclick="
         alert(`Cart quantity: ${cartQuantity}`);">show cart quantity</button>
     <button onclick="
-    if (cartQuantity >= 10) {
-        alert('Cart is full !');
-    }
-    else{
+    fullCart()
+    if (cartQuantity < 10){
         cartQuantity = cartQuantity + 1
         alert(`Cart quantity: ${cartQuantity}`);
 
     }
     ">Add to cart</button>
     <button onclick="
-    if (cartQuantity >= 10) {
-        alert('Cart is full !');
-    }
-    else{
+    fullCart()
+    if (cartQuantity < 10){
         cartQuantity = cartQuantity + 2
         alert(`Cart quantity: ${cartQuantity}`);
     }
     ">+ 2</button>
     <button onclick="
-    if (cartQuantity >= 10) {
-        alert('Cart is full !');
-    }
-    else{
+    fullCart()
+    if (cartQuantity < 10){
         cartQuantity = cartQuantity + 3
         alert(`Cart quantity: ${cartQuantity}`);
 
@@ -43,21 +37,16 @@
     ">reset cart</button>
 
     <button onclick="
-    if (cartQuantity <= 0 ) {
-        alert('Not enough items in the cart');
-    }
-    else {
+    notEnough()
+    if (cartQuantity > 0) {
         cartQuantity = cartQuantity - 2
         alert(`Cart quantity: ${cartQuantity}`);
     }
     
     ">- 2</button>
     <button onclick="
-    if (cartQuantity <= 0) {
-        alert('Not enough items in the cart');
-
-    }
-    else{
+    notEnough()
+    if (cartQuantity > 0){
         cartQuantity = cartQuantity - 3
         alert(`Cart quantity: ${cartQuantity}`);
     }
@@ -67,6 +56,18 @@
 
     <script>
         let cartQuantity = 0;
+
+        function fullCart() {
+            if (cartQuantity >= 10) {
+                alert('Cart is full !');
+            }
+        }
+
+        function notEnough() {
+            if (cartQuantity <= 0) {
+                alert('Not enough items in the cart');
+            }
+        }
 
     </script>
 </body>
