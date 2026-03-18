@@ -9,12 +9,12 @@
     
 
     <button onclick="
-        rps();
+        
         playgame('Rock')
         ">Rock
     </button>
     <button onclick="
-    rps();
+    
     playgame('Paper')
         ">Paper
     </button>   
@@ -22,45 +22,89 @@
     playgame('Scissor')
         ">Scissor
     </button>  
+
+    <button onclick="
+    score.win =0 
+    score.loose = 0
+    score.draw = 0
+    alert('your score has been reset !');
+    alert(`Win: ${score.win}, loose: ${score.loose}, Draw: ${score.draw}`)
+    ">Reset Score</button>
     
     <script>
+        const score = {
+            win: 0,
+            loose: 0,
+            draw: 0,
+        }
+        
         function playgame(playermove) {
             rps();
             if (playermove === 'Scissor') {
                 
                 if (computerMove === 'Rock') {
-                    alert(`computer: Rock , you: ${playermove}; you loose!`);
+                    score.loose = score.loose + 1
+                    alert(`computer: Rock , you: ${playermove}; you loose!
+                    Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    
+                    
+
                     }
                 else if (computerMove === 'Paper') {
-                    alert(`computer: Paper , you: ${playermove}; you won!`);
+                    score.win = score.win + 1
+                    alert(`computer: Paper , you: ${playermove}; you won!
+                    Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    
+
 
                     }
                 else if (computerMove === 'Scissor') {
-                    alert(`computer: Scissor , you: ${playermove}; Draw!`);
+                    score.draw = score.draw + 1
+                    alert(`computer: Scissor , you: ${playermove}; Draw!
+                    Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    
                     }
                 }
             else if (playermove === 'Rock') {
                 if (computerMove === 'Rock') {
-                    alert('computer: Rock , you: Rock; Draw!');
+                    score.draw = score.draw + 1
+                    alert(`computer: Rock , you: Rock; Draw!
+                    Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    
                     }
                 else if (computerMove === 'Paper') {
-                    alert('computer: Paper , you: Rock; you loose!');
+                    score.loose = score.loose + 1
+                    alert(`computer: Paper , you: Rock; you loose!
+                    Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    
 
                     }
                 else if (computerMove === 'Scissor') {
-                    alert('computer: Scissor , you: Rock; you won!');
+                    score.win = score.win + 1
+                    alert(`computer: Scissor , you: Rock; you won!
+                    Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    
                     }
             }
             else if (playermove === 'Paper') {
                     if (computerMove === 'Rock') {
-                        alert(`computer: Rock , you: ${playermove}; you won!`);
+                        score.win = score.win + 1
+                        alert(`computer: Rock , you: ${playermove}; you won!
+                        Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                        
                         }
                     else if (computerMove === 'Paper') {
-                        alert(`computer: Paper , you: ${playermove};Draw!`);
+                        score.draw = score.draw + 1
+                        alert(`computer: Paper , you: ${playermove};Draw!
+                        Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                        
 
                         }
                     else if (computerMove === 'Scissor') {
-                        alert(`computer: Scissor , you: ${playermove}; you loose!`);
+                        score.loose = score.loose + 1
+                        alert(`computer: Scissor , you: ${playermove}; you loose!
+                         Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                        
                         }
 
             }
