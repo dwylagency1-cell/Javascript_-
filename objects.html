@@ -27,12 +27,19 @@
             rating: {
                 stars: 4.5,
                 counts: 87
+            },
+            fun: function function1() {
+                console.log('function inside object')
             }
         }
         console.log(product_2)
         console.log(product_2.name)
         console.log(product_2['name'])
         console.log(product_2.rating)
+        product_2.fun()
+        
+        console.log(JSON.stringify(product_2));
+        console.log(JSON.parse(JSON.stringify(product_2)))
     </script>
 </body>
 </html>
