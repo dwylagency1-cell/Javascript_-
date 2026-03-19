@@ -27,16 +27,19 @@
     score.win =0 
     score.loose = 0
     score.draw = 0
+    localStorage.setItem('score', JSON.stringify(score));
     alert('your score has been reset !');
     alert(`Win: ${score.win}, loose: ${score.loose}, Draw: ${score.draw}`)
     ">Reset Score</button>
     
     <script>
-        const score = {
+        const score = JSON.parse(localStorage.getItem('score')) || {
             win: 0,
             loose: 0,
-            draw: 0,
-        }
+            draw: 0
+}; 
+        
+                    
         
         function playgame(playermove) {
             rps();
@@ -64,7 +67,10 @@
                     Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
                     
                     }
+                    
                 }
+                
+                
             else if (playermove === 'Rock') {
                 if (computerMove === 'Rock') {
                     score.draw = score.draw + 1
@@ -108,8 +114,10 @@
                         }
 
             }
+            localStorage.setItem('score' , JSON.stringify(score));
 
             }
+            
             
 
 
