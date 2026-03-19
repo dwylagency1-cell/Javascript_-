@@ -22,7 +22,9 @@
 
         delete product.newProperty;
         console.log(product)*/
-        const product_2 = {
+
+
+        /*const product_2 = {
             name: 'shirt',
             rating: {
                 stars: 4.5,
@@ -39,7 +41,73 @@
         product_2.fun()
         
         console.log(JSON.stringify(product_2));
-        console.log(JSON.parse(JSON.stringify(product_2)))
+        const jasonString = JSON.stringify(product_2)
+        console.log(JSON.parse(jasonString))*/
+
+        /*console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1 = {
+            message: 'hello'
+        }
+        console.log(object1)
+        const object2 = object1; 
+        console.log(object2)
+
+        object1.message = 'good job'
+        console.log(object1)
+        console.log(object2)*/
+
+        const product = {
+            name: 'basketball',
+            price: 25
+            
+
+        }
+        console.log(product)
+        product.price = 500
+        console.log(product)
+
+
+        function comparePrice(product1, product2) {
+            product1 = {
+                name: 'socks',
+                price: 90
+            }
+            product2 = {
+                name2: 'bag',
+                price2: 70
+            }
+            if (product1.price < product2.price2) {
+                console.log(product1.price)
+            }
+            else if (product2.price2 < product1.price) {
+                console.log(product2.price2)
+            }
+         }
+         comparePrice()
+
+         function isSameProduct(product1, product2) {
+            product1 = {
+                name: 'laptop',
+                price: 50000
+            }
+            product2 = {
+                name: 'laptop',
+                price: 50000
+            }
+            product1 = product2;
+            if (product1 === product2) {
+                console.log('true')
+            }
+            else{
+                console.log('false')
+            }
+
+         }
+         isSameProduct()
+
+         console.log('HELLO'.toLowerCase())
     </script>
 </body>
 </html>
