@@ -18,11 +18,15 @@
 
 
         if (result === 'head') {
-            alert('your guess is right , you won');
+            score.win = score.win + 1;
+            alert(`your guess is right , you won\n win: ${score.win} , losses: ${score.losses}`);
         }
         else{
-            alert('your guess is wrong, you loose');
-        }">head</button>
+            score.losses = score.losses + 1;
+            alert(`your guess is wrong, you loose\n losses: ${score.losses} , win: ${score.win}`);
+        
+        }
+        localStorage.setItem('score', JSON.stringify(score));">head</button>
 
         <button onclick="
         let random_2 =  Math.random();
@@ -34,15 +38,30 @@
         }
 
         if (result === 'tail') {
-            alert('your guess is right, you won');
+            score.win = score.win + 1;
+            alert(`your guess is right , you won\n win: ${score.win} , losses: ${score.losses}`);
         }
         else{
-            alert('your guess is wrong, you loose');
-        }">tail</button>
+            score.losses = score.losses + 1;
+            alert(`your guess is wrong, you loose\n losses: ${score.losses} , win: ${score.win}`);
+        }
+        localStorage.setItem('score', JSON.stringify(score));">tail</button>
 
-        <script>
+        <button onclick="
+        score = {
+            win: 0,
+            losses: 0
+        }
         
-        
+        localStorage.setItem('score', JSON.stringify(score));">reset score</button>
+
+    <script>
+
+        let score =JSON.parse(localStorage.getItem('score')) || {
+            win: 0,
+            losses: 0
+        };
+
     </script>
 
     
