@@ -8,12 +8,36 @@
 <body>
     <button>hello</button>
     <button class="js-button">second button</button>
+
+    <button class="a">9a</button>
+    <button  onclick="
+    document.querySelector('.head').innerHTML = 'you clicked: head'">head</button>
+    <p class="head"></p>
+    <button onclick="
+    document.querySelector('.tails').innerHTML = 'you clicked: tails'" >tails</button>
+    <p class="tails"></p>
+
+    <input class="input" type="text" name="name">
+    <button onclick="
+    document.querySelector('.input-text').innerHTML = document.querySelector('.input').value">Submit</button>
+    <p class="input-text"></p>
     <script>
+        console.log(document.querySelector('.a').innerHTML)
+        console.log(document.querySelector('.a').innerHTML = '9b dome!')
+
+
+
+
+
+        
+
+        /*
         console.log(document.querySelector('button').innerHTML);
         document.querySelector('button').innerHTML = 'changed'
 
        const buttonElement = document.querySelector(".js-button");
        console.log(buttonElement)
+       */
 
 
         /*
@@ -29,6 +53,10 @@
         document.title = 'good job';
         console.log(document.title);
         */
+
+
+        
+
     </script>
     
 </body>
