@@ -10,7 +10,18 @@
     <p>Order under $40 = + $10 Shipping</p>
     <p>Order over $40 = Free Shipping</p>
     
-    <input class="js-input" type="number" name="calculate">
+    <input class="js-input" type="number" name="calculate" onkeydown="
+    console.log(event.key)
+    if (event.key === 'Enter') {
+        if (Number(document.querySelector('.js-input').value) < 40) {
+            document.querySelector('.js-final-result').innerHTML = `$${Number(document.querySelector('.js-input').value) + 10}`
+
+        }
+        else if (Number(document.querySelector('.js-input').value) > 40) {
+            document.querySelector('.js-final-result').innerHTML = `$${Number(document.querySelector('.js-input').value)}`
+
+        }
+    }">
     <p class="js-final-result"></p>
     <button  onclick="
     if (Number(document.querySelector('.js-input').value) < 40) {
@@ -19,6 +30,10 @@
     }
     else if (Number(document.querySelector('.js-input').value) > 40) {
         document.querySelector('.js-final-result').innerHTML = `$${Number(document.querySelector('.js-input').value)}`
+
+    }
+    else if (document.querySelector('.js-input').value === 7.99) {
+        
 
     }
 
