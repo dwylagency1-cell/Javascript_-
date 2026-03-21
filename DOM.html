@@ -17,10 +17,19 @@
     document.querySelector('.tails').innerHTML = 'you clicked: tails'" >tails</button>
     <p class="tails"></p>
 
-    <input class="input" type="text" name="name">
+    <input class="input" type="text" name="name" onkeydown="
+    console.log(event.key)
+    if (event.key === 'Enter') {
+        document.querySelector('.input-text').innerHTML = document.querySelector('.input').value
+    }">
     <button onclick="
     document.querySelector('.input-text').innerHTML = document.querySelector('.input').value">Submit</button>
     <p class="input-text"></p>
+
+    <input class="something" type="text" name="something" placeholder="Type something" onkeyup="
+    document.querySelector('.keep-writing').innerHTML = document.querySelector('.something').value">
+    <p class="keep-writing"></p>
+
     <script>
         console.log(document.querySelector('.a').innerHTML)
         console.log(document.querySelector('.a').innerHTML = '9b dome!')
