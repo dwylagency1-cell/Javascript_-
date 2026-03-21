@@ -28,16 +28,26 @@
     score.loose = 0
     score.draw = 0
     localStorage.setItem('score', JSON.stringify(score));
-    alert('your score has been reset !');
-    alert(`Win: ${score.win}, loose: ${score.loose}, Draw: ${score.draw}`)
+    
+    alert(`your score has been reset !\nWin: ${score.win}, loose: ${score.loose}, Draw: ${score.draw}`);
+    alert(`Now refresh the page !!`)
+    document.querySelector('js-score').innerHTML = `Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`;
+    
     ">Reset Score</button>
+    <p class="js-result"></p>
+    <p class="js-score"></p>
+
     
     <script>
         const score = JSON.parse(localStorage.getItem('score')) || {
             win: 0,
             loose: 0,
             draw: 0
-}; 
+
+            
+        }; 
+
+        document.querySelector('.js-score').innerHTML = `Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`;
         
                     
         
@@ -47,8 +57,9 @@
                 
                 if (computerMove === 'Rock') {
                     score.loose = score.loose + 1
-                    alert(`computer: Rock , you: ${playermove}; you loose!
+                    alert(`computer: Rock , you: ${playermove}; you lose!
                     Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    document.querySelector('.js-result').innerHTML = 'you lose'
                     
                     
 
@@ -57,6 +68,7 @@
                     score.win = score.win + 1
                     alert(`computer: Paper , you: ${playermove}; you won!
                     Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    document.querySelector('.js-result').innerHTML = 'you won'
                     
 
 
@@ -65,6 +77,7 @@
                     score.draw = score.draw + 1
                     alert(`computer: Scissor , you: ${playermove}; Draw!
                     Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    document.querySelector('.js-result').innerHTML = 'Draw'
                     
                     }
                     
@@ -76,12 +89,14 @@
                     score.draw = score.draw + 1
                     alert(`computer: Rock , you: Rock; Draw!
                     Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    document.querySelector('.js-result').innerHTML = 'Draw'
                     
                     }
                 else if (computerMove === 'Paper') {
                     score.loose = score.loose + 1
-                    alert(`computer: Paper , you: Rock; you loose!
+                    alert(`computer: Paper , you: Rock; you lose!
                     Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    document.querySelector('.js-result').innerHTML = 'you lose'
                     
 
                     }
@@ -89,6 +104,7 @@
                     score.win = score.win + 1
                     alert(`computer: Scissor , you: Rock; you won!
                     Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                    document.querySelector('.js-result').innerHTML = 'you won'
                     
                     }
             }
@@ -97,24 +113,30 @@
                         score.win = score.win + 1
                         alert(`computer: Rock , you: ${playermove}; you won!
                         Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                        document.querySelector('.js-result').innerHTML = 'you won'
                         
                         }
                     else if (computerMove === 'Paper') {
                         score.draw = score.draw + 1
                         alert(`computer: Paper , you: ${playermove};Draw!
                         Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                        document.querySelector('.js-result').innerHTML = 'Draw'
                         
 
                         }
                     else if (computerMove === 'Scissor') {
                         score.loose = score.loose + 1
-                        alert(`computer: Scissor , you: ${playermove}; you loose!
+                        alert(`computer: Scissor , you: ${playermove}; you lose!
                          Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`);
+                         document.querySelector('.js-result').innerHTML = 'you lose'
                         
                         }
 
             }
             localStorage.setItem('score' , JSON.stringify(score));
+
+
+            document.querySelector('.js-score').innerHTML = `Win: ${score.win}, loose: ${score.loose}, draw: ${score.draw}`;
 
             }
             
