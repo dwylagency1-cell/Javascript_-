@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>amazon-shipping</title>
+    <style>
+        .input-css{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 10px;
+        }
+        .cal-button{
+            background-color: rgb(9, 156, 9);
+            color: white;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-style: none;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <p>Amazon Shipping Calculator</p>
     <p>Order under $40 = + $10 Shipping</p>
     <p>Order over $40 = Free Shipping</p>
     
-    <input class="js-input" type="number" name="calculate" onkeydown="
+    <input class="js-input input-css" type="number" name="calculate" onkeydown="
     console.log(event.key)
     if (event.key === 'Enter') {
         if (Number(document.querySelector('.js-input').value) < 40) {
@@ -23,7 +43,7 @@
         }
     }">
     <p class="js-final-result"></p>
-    <button  onclick="
+    <button class="cal-button"  onclick="
     if (Number(document.querySelector('.js-input').value) < 40) {
         document.querySelector('.js-final-result').innerHTML = `$${(Number(document.querySelector('.js-input').value) + 10).toFixed(2)}`
 
