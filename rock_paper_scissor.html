@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock , Paper, Scissors</title>
-</head>
-<body>
-    
+    <title>Rock Paper Scissors</title>
+    <style>
+        .para_1{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .reset_button{
+            background-color: rgb(226, 225, 225);
+            border-style: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 10px;
+            cursor: pointer;
 
+        }
+        .button_icon{
+            width: 100px;
+            background-color: rgb(30, 30, 30);
+            border-radius: 60px;
+            
+        }
+    </style>
+</head>
+<body style="background-color: rgb(30, 30, 30); 
+color: white;
+font-family: arial;">
+    
+    <p class="para_1">Rock Paper Scissor</p>
     <button onclick="
         
         playgame('Rock')
-        ">Rock
+        "><img class="button_icon" src="rock.png">
     </button>
     <button onclick="
     
     playgame('Paper')
-        ">Paper
+        "><img class="button_icon" width="100px" src="papericon.png">
     </button>   
     <button onclick="
     playgame('Scissor')
-        ">Scissor
+        "><img class="button_icon" width="100px" src="scissors-emoji.png">
     </button>  
 
-    <button onclick="
+    <button class="reset_button" onclick="
     score.win =0 
     score.loose = 0
     score.draw = 0
