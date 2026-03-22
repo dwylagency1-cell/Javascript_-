@@ -7,50 +7,50 @@
 </head>
 <body>
     <button onclick="
-        alert(`Cart quantity: ${cartQuantity}`);">show cart quantity</button>
+        alert(`Cart quantity: ${cartQuantity}`);
+        document.querySelector('.all-para').innerHTML = `Cart quantity: ${cartQuantity}`">show cart quantity</button>
     <button onclick="
     fullCart()
     if (cartQuantity < 10){
-        cartQuantity = cartQuantity + 1
-        alert(`Cart quantity: ${cartQuantity}`);
+        addToCart(1);
 
     }
+
     ">Add to cart</button>
     <button onclick="
     fullCart()
     if (cartQuantity < 10){
-        cartQuantity = cartQuantity + 2
-        alert(`Cart quantity: ${cartQuantity}`);
+        addToCart(2)
     }
+
     ">+ 2</button>
     <button onclick="
     fullCart()
     if (cartQuantity < 10){
-        cartQuantity = cartQuantity + 3
-        alert(`Cart quantity: ${cartQuantity}`);
+        addToCart(3)
 
     }">+ 3</button>
     <button onclick="
     alert('Cart has been reset');
     cartQuantity = 0
     alert(`Cart quantity: ${cartQuantity}`);
-    ">reset cart</button>
+    document.querySelector('.all-para').innerHTML = `Cart quantity: ${cartQuantity}`">reset cart</button>
 
     <button onclick="
     notEnough()
     if (cartQuantity > 0) {
-        cartQuantity = cartQuantity - 2
-        alert(`Cart quantity: ${cartQuantity}`);
+        subtractToCart(2)
     }
     
     ">- 2</button>
     <button onclick="
     notEnough()
     if (cartQuantity > 0){
-        cartQuantity = cartQuantity - 3
-        alert(`Cart quantity: ${cartQuantity}`);
+        subtractToCart(3)
     }
     ">- 3</button>
+
+    <p class="all-para"></p>
 
 
 
@@ -65,8 +65,21 @@
 
         function notEnough() {
             if (cartQuantity <= 0) {
+                document.querySelector()
                 alert('Not enough items in the cart');
             }
+        }
+
+        function addToCart(num) {
+            cartQuantity = cartQuantity + num
+            document.querySelector('.all-para').innerHTML = `Cart quantity: ${cartQuantity}`
+            alert(`Cart quantity: ${cartQuantity}`);
+        }
+
+        function subtractToCart(num) {
+            cartQuantity = cartQuantity - num
+            alert(`Cart quantity: ${cartQuantity}`);
+            document.querySelector('.all-para').innerHTML = `Cart quantity: ${cartQuantity}`
         }
 
     </script>
