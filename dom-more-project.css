@@ -1,0 +1,92 @@
+.Gaming{
+            background-color: rgb(212, 212, 212);
+            color: black;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 15px;
+            border-style: none;
+            border-radius: 10px;
+        }
+.Music{
+            background-color: rgb(212, 212, 212);
+            color: black;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 15px;
+            border-style: none;
+            border-radius: 10px;
+
+        }
+.Tech{
+            background-color: rgb(212, 212, 212);
+            color: black;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 15px;
+            border-style: none;
+            border-radius: 10px;
+
+        }
+.js-gaming-css{
+            background-color: black;
+            color: white;
+
+        }
+
+.div{
+   
+    height: 100px;
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    
+
+}
+.Male{
+        background-color: rgb(212, 212, 212);
+        color: black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+        border-style: none;
+        border-radius: 10px;
+
+}
+.Female{
+    background-color: rgb(212, 212, 212);
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    border-style: none;
+    border-radius: 10px;
+
+}
+.prefer_not_to_say{
+    background-color: rgb(212, 212, 212);
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.js-either_of_the_button{
+    background-color: black;
+    color: white;
+}
