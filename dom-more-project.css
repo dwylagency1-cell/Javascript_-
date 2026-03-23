@@ -50,6 +50,14 @@
     
 
 }
+.div_2{
+    height: 60px;
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
 .Male{
         background-color: rgb(212, 212, 212);
         color: black;
@@ -89,4 +97,22 @@
 .js-either_of_the_button{
     background-color: black;
     color: white;
+}
+.cost_button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    border-width: thin;
+    background-color: rgb(1, 159, 1);
+    color: white;
+}
+.input_styling{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border-width: thin;
+    font-size: 13px;
 }
