@@ -27,6 +27,22 @@
         either_of_the_button(this)">prefer not to say</button>
 
     </div>
+    <div class="div_2">
+        <input class="cost input_styling" type="number" placeholder="Enter a cost" onkeydown="
+        if (event.key === 'Enter') {
+            calculate_cost()
+        }">
+        <button class="cost_button" onclick="
+        calculate_cost()">Calculate</button>
+        
+    </div>
+    <p style="margin-left: 55px;
+    position: relative;
+    bottom: 15px;
+    color: red;
+    font-family: arial;
+    font-size: 13px;"class="cost_para"></p>
+
 
     <script src="dom-more-project.js"></script>
 </body>
