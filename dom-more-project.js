@@ -46,3 +46,13 @@ function either_of_the_button(buttonClicked) {
     }
 
 }
+
+function calculate_cost() {
+    if (Number(document.querySelector('.cost').value) < 0) {
+        document.querySelector('.cost_para').innerHTML = 'cost cannot be less than $0'
+    }
+    else{
+        document.querySelector('.cost_para').innerHTML = `Cost: $${Number(document.querySelector('.cost').value)}`
+    }
+
+}
