@@ -8,8 +8,15 @@
 <body>
     <script src="todo_list.js"></script>
     <p>Todo List</p>
-    <input type="text" class="add_todos" placeholder="Todo name">
+    <input type="text" class="add_todos" placeholder="Todo name" onkeydown="
+    if (event.key === 'Enter') {
+        add_input()
+    }">
+    <input class="date_time" type="date">
     <button onclick="
     add_input()">Add</button>
+    <div class="js_div"></div>
+
+    <div class="js_todo_list"></div>
 </body>
 </html>
