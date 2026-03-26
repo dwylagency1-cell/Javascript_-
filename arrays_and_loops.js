@@ -197,9 +197,39 @@ function removeEgg(foods) {
 
         }
         console.log(foods[i])
-
     }
 
+}
+removeTwoEgg([, 'apple', 'egg', 'egg', 'Banana', 'egg'])
+function removeTwoEgg(food) {
+    for (i = 0; i < food.length; i++) {
+        if (food[i] === 'egg')
+            continue;
+
+    }
+    console.log(food[i])
+
+}
+
+for (let i = 1; i <=20; i++) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz')
+        continue
+    }
+
+    else if (i % 3=== 0) {
+        console.log('Fizz')
+        continue
+    }
+    else if (i % 5 === 0) {
+        console.log('Buzz')
+        continue
+
+    }
+    
+    
+    console.log(i)
 }
 
 
