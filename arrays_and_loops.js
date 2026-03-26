@@ -155,6 +155,54 @@ function double(array) {
     }
     console.log(array)
 }
+findSearch(['goood','world' ,'nvkrb','Search'])
+function findSearch(array) {
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === 'Search') {
+            console.log(i)
+            return;
+        }
+        
+    }
+    console.log('-1')
+    
+}
+findFirstSearch(['goood','world' ,'nvkrb','car', 'Search', 'Search']) 
+function findFirstSearch(array) {
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === 'Search') {
+            console.log(i)
+            break
+
+        }
+    }
+}
+findIndex(['red', 'white', 'yellow'], 'white')
+function findIndex(array, word) {
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+            console.log(i)
+            return;
+
+        }
+        console.log('-1')
+
+    }
+}
+removeEgg(['egg', 'apple', 'egg', 'egg', 'Banana'])
+function removeEgg(foods) {
+    for (i = 0; i < foods.length; i++) {
+        if (foods[i] === 'egg') {
+            continue;
+
+        }
+        console.log(foods[i])
+
+    }
+
+}
+
+
 
 
 
