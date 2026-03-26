@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>expense tracker</title>
+    <link rel="stylesheet" href="expense_track.css">
 </head>
 <body>
     <script src="expense_track.js"></script>
-    <p>Expense Tracker</p>
-    <input type="number" class="expense" placeholder="Enter your expense">
-    <input class="expense_date" type="date">
-    <button class="add_button" onclick="
-    add_expense_to_array()">Add</button>
+    <p style="font-family: arial;
+    font-size: 30px;">Expense Tracker</p>
+    <input type="number" class="expense expense_css" placeholder="Enter your expense">
+    <input class="expense_date expense_date_css" type="date">
+    <button class="add_button button_css" onclick="
+    add_expense_to_array()">ADD</button>
     <div class="expense_div"></div>
-    <p class="sum_para"></p>
+    <p style="font-family: arial;" class="sum_para"></p>
 </body>
 </html>
