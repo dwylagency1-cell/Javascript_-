@@ -93,7 +93,7 @@ function countPositive(nums) {
  minMax([2, 4, 6])
 function minMax(nums) {
     let min = nums[0]
-    let max = nums[0] 
+    let max = nums[0]
     for (i = 0; i < nums.length; i++) {
         
         if (nums[i] < min) {
@@ -108,6 +108,54 @@ function minMax(nums) {
     console.log(min, max)
 
 }
+
+const array_1 = [1, 2, 3]
+const array_2 = array_1.slice()
+
+
+array_2.push(2)
+console.log(array_1)
+console.log(array_2)
+
+const array_3 = [2, 5, 6]
+
+console.log(array_3[0],array_3[2])
+
+
+for (let i = 1; i <= 10; i++) {
+    if (i === 10) {
+        break
+
+    }
+    else if (i % 3 === 0) {
+        continue
+
+    }
+    console.log(i)
+}
+
+let  index = 1
+
+while (index <= 10) {
+    if (index % 3 === 0) {
+        index++
+        continue
+
+    }
+    console.log(index)
+    index++
+}
+double([1, 3, 4])
+double([6, 9, 8])
+function double(array) {
+    for (i = 0; i< array.length; i++ ) {
+        array[i];
+
+        array[i] = array[i] * 2
+    }
+    console.log(array)
+}
+
 
 
 
