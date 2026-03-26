@@ -1,4 +1,4 @@
-let expense_list = [{
+let expense_list =JSON.parse(localStorage.getItem('expense')) || [{
     expense: 200,
     date: '2026-12-22'
 },{
@@ -6,6 +6,8 @@ let expense_list = [{
     date: '2026-12-22'
 
 }]
+
+
 render_expence()
 totalExpense()
 function render_expence() {
@@ -15,6 +17,7 @@ function render_expence() {
 
         let HTML = `<p style = "font-family: arial">Expense: $${expense_list[i].expense},  Date: ${expense_list[i].date} <button class= "js_delete_css" onclick = "
         expense_list.splice(${i}, 1)
+        localStorage.setItem('expense', JSON.stringify(expense_list))
         render_expence()">Delete</button></p>`
 
         expenseHtml = expenseHtml + HTML
@@ -48,5 +51,7 @@ function add_expense_to_array() {
 
     render_expence()
     totalExpense()
+
+    localStorage.setItem('expense', JSON.stringify(expense_list))
 
 }
