@@ -59,7 +59,47 @@ console.log('next line');
     });   
     
     
-    
+const add = function() {
+    console.log(2 + 3)
+};
+
+function runTwice(fun) {
+    fun()
+    fun()
+}
+runTwice(function() {
+    console.log('12b')
+})
+runTwice(add)
+
+function change() {
+    document.querySelector('.start_button').innerHTML = 'Loading..'
+    setTimeout(function() {
+        document.querySelector('.start_button').innerHTML = 'Finished!'
+    }, 2000)
+}
+
+function addToCart() {
+    document.querySelector('.add_Tocart_para').innerHTML = 'Item added !'
+    setTimeout(function() {
+        document.querySelector('.add_Tocart_para').innerHTML = ''
+    }, 2000)
+}
+interval()
+function interval() {
+    setInterval(function() {
+        if (document.title === 'App') {
+            document.title = '(2) New Message';
+
+        }
+        else if (document.title === '(2) New Message') {
+            document.title = 'App';
+        }
+    }, 1000)
+}
+
+
+
 
 
 
