@@ -85,6 +85,7 @@ function addToCart() {
         document.querySelector('.add_Tocart_para').innerHTML = ''
     }, 2000)
 }
+/*
 interval()
 function interval() {
     setInterval(function() {
@@ -97,6 +98,43 @@ function interval() {
         }
     }, 1000)
 }
+*/
+let i = 0
+function change_title() {
+    intervalId = setInterval(function() {
+            if (document.title === 'App') {
+                document.title = `(${i}) New Message`
+
+            }
+            else if(document.title === `(${i}) New Message`) {
+                document.title = 'App'
+                
+            }
+        }, 1000)
+
+};
+
+change_title()
+
+function add_Num_to_title() {
+    document.title = `(${i = i + 1}) New Message`
+
+}
+function remove_Num_to_title() {
+    if (i < 0) {
+        document.title = 'App'
+        clearInterval(intervalId)
+        
+
+    }
+    else if (i > 0){
+        document.title = `(${i = i - 1}) New Message`
+
+    }
+    
+}
+
+
 
 
 
