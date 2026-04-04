@@ -1,0 +1,11 @@
+.nav{
+    background-color: #0f172a;
+    display: flex;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
