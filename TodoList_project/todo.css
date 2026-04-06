@@ -9,3 +9,51 @@
     flex-direction: row;
     
 }
+.input_box{
+    
+    width: 700px;
+    height: 400px;
+    position: relative;
+    top: 200px;
+}
+.input_form{
+    
+    width: 700px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+}
+.input{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 300px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.button{
+    margin-right: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: thin;
+    font-size: 14px;
+    background-color: #1e293b;
+    color: white;
+    border-color: white;
+}
+.display_todo_div{
+    
+    width: 600px;
+    height: 200px;
+    margin-left: 20px;
+}
