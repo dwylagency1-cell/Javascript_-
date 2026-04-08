@@ -54,3 +54,13 @@
 .add_to_cart_button:hover{
     background-color: #f3f3f3;
 }
+.quantity_container{
+    position: absolute;
+            
+            width: 30px;
+            height: 40px;
+            bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
