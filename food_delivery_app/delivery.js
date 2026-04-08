@@ -59,7 +59,7 @@ foods.forEach(function(items) {
                 display: flex;
                 justify-content: center;
                 align-items: center;">
-                    <button class="add_to_cart_button">Add to cart</button>
+                    <button class="add_to_cart_button js-add-to-cart-button" data-product-id = ${items.id}>Add to cart</button>
                 </div>
                
             </div>
@@ -68,3 +68,32 @@ foods.forEach(function(items) {
 });
 console.log(foodHTML)
 document.querySelector('.js-cards').innerHTML = foodHTML;
+
+document.querySelectorAll('.js-add-to-cart-button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const productId = button.dataset.productId
+        
+        
+        let matchingItem;
+        cart.forEach(function(item) {
+            
+            if (productId === item.productId) {
+                matchingItem = item
+
+            };
+        });
+        if (matchingItem) {
+            matchingItem.quantity = matchingItem.quantity + 1
+
+        }
+        else{
+            cart.push({
+                productId: productId,
+                quantity: 1
+            });
+        };
+        console.log(cart)
+        
+    });
+
+});
