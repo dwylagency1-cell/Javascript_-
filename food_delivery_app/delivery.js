@@ -70,7 +70,9 @@ console.log(foodHTML)
 document.querySelector('.js-cards').innerHTML = foodHTML;
 
 document.querySelectorAll('.js-add-to-cart-button').forEach(function(button) {
+    
     button.addEventListener('click', function() {
+        
         const productId = button.dataset.productId
         
         
@@ -92,6 +94,13 @@ document.querySelectorAll('.js-add-to-cart-button').forEach(function(button) {
                 quantity: 1
             });
         };
+
+        let foodQuantity = 0
+        cart.forEach(function(item) {
+            foodQuantity = foodQuantity + item.quantity
+            document.querySelector('.js-quantity').innerHTML = foodQuantity
+
+        });
         console.log(cart)
         
     });
