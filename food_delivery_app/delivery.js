@@ -102,6 +102,7 @@ document.querySelectorAll('.js-add-to-cart-button').forEach(function(button) {
 
         });
         console.log(cart)
+        localStorage.setItem('cart', JSON.stringify(cart))
         
     });
 
