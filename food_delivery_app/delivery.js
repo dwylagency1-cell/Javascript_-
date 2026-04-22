@@ -1,3 +1,5 @@
+
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let foodHTML = '';
 
 foods.forEach(function(items) {
