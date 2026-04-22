@@ -1,3 +1,4 @@
+re_render()
 function re_render() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     let itemCartHTML = '';
