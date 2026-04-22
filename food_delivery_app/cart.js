@@ -2,7 +2,7 @@ re_render()
 function re_render() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     let itemCartHTML = '';
-    cart.forEach(function(items, index) {
+    cart.forEach(function(items ) {
         let matchingItem
         const productId = items.productId
 
@@ -36,7 +36,7 @@ function re_render() {
                     font-size: 19px;">Quantity: ${items.quantity}</p>
                 </div>
                 <div class="operate">
-                    <button class="delete_button js-delete-button" data-index = ${index}>Delete </button>
+                    <button class="delete_button js-delete-button" data-index = ${items.index}>Delete </button>
                 </div>
             </div>
         </div>`
